@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-montserrat);
+}
+
+/* Стили для WebKit-браузеров (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Ширина вертикальной полосы прокрутки */
+  height: 12px; /* Высота горизонтальной полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+  background: #edf2f7; /* Цвет фона трека */
+  border-radius: 6px; /* Закругление углов трека */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Цвет ползунка */
+  border-radius: 6px; /* Закругление углов ползунка */
+  border: 3px solid #edf2f7; /* Отступ вокруг ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d3748; /* Цвет ползунка при наведении */
+}
